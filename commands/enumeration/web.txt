@@ -1,0 +1,5 @@
+ffuf -ic -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u http://<<HOST>>/FUZZ -o fuzz/level1-p80.ffuf -of csv
+
+ffuf -ic -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u https://<<HOST>>/FUZZ -o fuzz/level1-p443.ffuf -of csv
+
+ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.<<HOST>>" -c -u http://<<HOST>>
